@@ -3,7 +3,7 @@ identity_token "aws" {
 }
 
 store "varset" "openshift_rosa" {
-  id       = "varset-TC8xJVcQjbr7ux9z"
+  id       = "varset-Mm84KjHtQNWfoCJc"
   category = "terraform"
 }
 
@@ -11,14 +11,14 @@ store "varset" "openshift_rosa" {
 deployment "openshift_rosa_dev" {
   inputs = {
     aws_identity_token = identity_token.aws.jwt
-    role_arn            = "arn:aws:iam::855831148133:role/tfstacks-role"
-    region             = "ap-southeast-1"
+    role_arn            = "arn:aws:iam::521614675974:role/tfstacks-role"
+    region             = "ap-southeast-2"
     rhcs_token        = store.varset.openshift_rosa.rhcs_token
-    aws_billing_account_id = "855831148133"
-    cidr_block          = "10.200.0.0/16"
-    public_subnets      = ["subnet-0c0eca1ee285e4177","subnet-0874f2ae2f9c50df2","subnet-0e88e26f5d4ef35ed"]
-    private_subnets = ["subnet-02212f2302fabd834","subnet-08b9377572491efc9","subnet-0ebd436da0b50aa7b"]
-    availability_zones  = ["ap-southeast-1a", "ap-southeast-1b", "ap-southeast-1c"]
+    aws_billing_account_id = "521614675974"
+    cidr_block          = "10.0.0.0/16"
+    public_subnets      = ["subnet-05fdfbb99d4786f03"]
+    private_subnets = ["subnet-05fdfbb99d4786f03","subnet-08ef1a374e560fc44"]
+    availability_zones  = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
     cluster_name        = "rosa-dev-cluster"
     openshift_version   = "4.18.7"
     account_role_prefix = "ManagedOpenShift"
