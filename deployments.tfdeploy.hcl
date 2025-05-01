@@ -41,13 +41,13 @@ deployment "openshift_rosa_dev2" {
     public_subnets      = ["subnet-0bd998df5ba13b0a3","subnet-06b66f3a85082bfb1","subnet-00c6534d40c01c1d5"]
     private_subnets = ["subnet-0c63f747f7be8fb77","subnet-085f46d75886f8f4f","subnet-030485322fe506c57"]
     availability_zones  = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
-    cluster_name        = "rosa-dev-cluster"
+    cluster_name        = "rosa-dev-cluster-2"
     openshift_version   = "4.18.7"
-    account_role_prefix = "ManagedOpenShift"
-    operator_role_prefix = "ManagedOpenShift"
+    account_role_prefix = "dev2OpenShift"
+    operator_role_prefix = "dev2OpenShift"
     replicas           = 1
-    htpasswd_idp_name   = "dev-htpasswd"
-    htpasswd_username   = "dev-htadmin" 
+    htpasswd_idp_name   = "dev2-htpasswd"
+    htpasswd_username   = "dev2-htadmin" 
 
   }
 }
